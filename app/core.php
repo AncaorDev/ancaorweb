@@ -1,0 +1,104 @@
+<?php namespace app;
+/**
+* 
+*/
+class Core {
+private $host;
+private $url;
+function __construct() {
+	$this -> ejecutar();
+}
+function ejecutar(){
+	error_reporting(0);
+	date_default_timezone_set("America/Lima");
+	/* ---------------------------------------------------
+		Autoregistro de los modelos
+	--------------------------------------------------- */
+	spl_autoload_register( function( $NombreClase ) {
+		$NombreClase = str_replace('\\', '/' , $NombreClase);
+		if (file_exists(__DIR__.'/../model/' . $NombreClase . '.php')) {
+			require_once __DIR__.'/../model/' . $NombreClase . '.php';
+		} else if (file_exists(__DIR__.'/clases/'.$NombreClase . '.php')){
+			require_once __DIR__.'/clases/'.$NombreClase . '.php';
+		} else if (file_exists(realpath(__DIR__.'/../'.$NombreClase.'.php'))){
+			include_once realpath(__DIR__.'/../'.$NombreClase.'.php');
+		} else {
+			echo "Not found class archive $NombreClase " . " Error en core.php línea : " . __LINE__ . "</br>";
+		}
+	});
+	/* ---------------------------------------------------
+		   Obtenemos las variables de .dataconfig 
+	--------------------------------------------------- */
+	try {
+		$datos = \readFiles::leerDatos();
+	} catch (Exception $e) {
+		throw $e;
+	}
+	/* ---------------------------------------------------
+		Obtenemos el host en la cual esta el proyecto
+	--------------------------------------------------- */
+	$https = (!empty($_SERVER['HTTPS']) ? 'https' : 'http');
+	
+	if (stristr($_SERVER["HTTP_HOST"], "localhost") === false) {
+		$this -> host = $https . '://' . $_SERVER["HTTP_HOST"] .'/';
+	} else {
+		$urldata = explode('/', $_SERVER['SCRIPT_NAME']);
+		$folder = $urldata[1];
+		$this -> host = $https . '://' . $_SERVER["HTTP_HOST"] .'/' . $folder . '/' ;
+	}
+
+	/* ---------------------------------------------------
+			Constantes del proyecto
+	--------------------------------------------------- */
+	DEFINE('DEBUG',$datos['DEBUG']); // <-- Dirección Host
+	DEFINE('HOST',$datos['HOST']); // <-- Dirección Host
+	DEFINE('USER',$datos['USER']);  // <-- Nombre de Usuario 
+	DEFINE('PASS',$datos['PASS']); // <-- Contraseña para acceso a la Base de Datos
+	DEFINE('DBNAME',$datos['DBNAME']); // <-- Nombre de la Base de Datos
+	DEFINE('HOME', $this -> host); // <-- URL principal
+	DEFINE('BASE', $this -> host); //  <-- Dirección Vistas
+	DEFINE('FB_ID',$datos['FB_ID']); // <-- ID FB
+	DEFINE('AUTHOR',$datos['AUTHOR']); // <-- Autor de la pagina
+	DEFINE('COPY','Ancaor &trade;'.' 2015 - '.date('Y')); //<-- Copy Right
+	DEFINE('DIR_LIBS','libs/');  // <-- Dirección de archivos HTML
+	DEFINE('DIR_BS','libs/bootstrap/'); // BOOTSTRAP	
+	DEFINE('DIR_RS','public/resources/'); // RESOURCES
+	DEFINE('VIEWS','public/views/'); // <-- VIEWS
+	DEFINE('IMAGE','public/resources/images/'); // <-- IMAGES
+	DEFINE('DATE',date('d-Y-m')); // Fecha Servidor 
+	DEFINE('WEBSITE','Ancaor'); // Fecha Servidor 
+	
+
+	/* ---------------------------------------------------
+		Enviamos los datos para Javascript
+	--------------------------------------------------- */
+	$datosjs = ["URL" => $this -> url ];
+	// escribirDatos($datosjs);
+	//Extensión .html o .htm
+	DEFINE('EXT','phtml');
+	/* ---------------------------------------------------
+		Archivos necesario
+	--------------------------------------------------- */
+
+	//URLS 
+	DEFINE('URL_PANEL',$this -> url.'panel/');
+	DEFINE('URL_OTHER',$this -> url.'other/');	
+	if (class_exists('Session')) {
+		\Session::init();
+		DEFINE('SESSION', \Session::exists());
+	} else {
+		echo "Error en la clase Sesion\rPor favor verificar";
+	}
+	// var_dump(debug_backtrace());
+	if (DEBUG) {
+		error_reporting(-1);	
+	}
+}
+
+public function __destruct(){
+	
+}
+
+}
+//Fin Clase
+// echo __FILE__;

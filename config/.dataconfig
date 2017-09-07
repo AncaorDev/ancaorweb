@@ -1,0 +1,14 @@
+{
+"######" : "Configuración Base de Datos",
+"HOST"   : "localhost",
+"USER"   : "root",
+"PASS"   : "",
+"DBNAME" : "ubigeoperu",
+"DEBUG"  : true,
+
+"######" : "Configuración Metas Web",
+"AUTHOR" : "Ancaor",
+
+"######" : "ID APIS",
+"FB_ID"  : ""
+}

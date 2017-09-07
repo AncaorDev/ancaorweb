@@ -1,0 +1,95 @@
+{% extends "base.twig" %}
+{% block title %} Inicio {% endblock %}
+{% block head %}{{parent()}}
+<link rel="stylesheet" type="text/css" href="./css/inicio.css?id={{random()}}">
+{% set img = random(5)  %}
+<style type="text/css">
+	#inicio {
+		background: url('./images/fondos/{{img}}.jpg');
+		background-position: center -40%;
+	    background-size: cover;
+	    width: 100%;
+	    max-width: 100%;
+	    max-height: 100%;
+	    height: 100%;
+	    background-repeat: no-repeat;
+	    /*background-position: 0px 0px; */
+	    background-attachment: fixed;
+	}
+	@media (min-width: 720px) {
+		#inicio {
+			background-position: 50% -32%;
+		}    	
+	}
+	@media (min-width: 1440px) {
+		#inicio {
+			background-position: 50% -10%;
+		}  
+	}
+</style>
+{% endblock %}
+{% block content %}
+<section id="inicio">
+		
+	{% include 'includes/header.twig' %}
+
+	<div class="content-cabecera">
+		<div id="logo-body" class="logo-body animate-left"><img src="./images/ancaor/Ancaor2017.png" alt="Ancaor Logo"></div>
+		<a href="#section-about" class="btn-normal btn-inicio txt-about"> Sobre Ancaor </a>
+		<div class="separador">
+			{# <hr> #}
+		</div>
+		<div class="frase">
+			<div class="content-cab-frase">
+				<p class="txt-frase">Frase aleatoria:  
+					<span id="change_phrase" class="btn btn-danger">  Cambiar frase </span>
+				</p>	
+			</div>
+			<span style="clear: both"></span>
+			<p id="text-frase" class="text-frase show-left"> "{{ datos['frase'] }} "</p>
+		</div>
+		<a id="cont-icon" href="#section-about"><i id="icon-down" class="icon-down-open"></i></a>
+	</div>
+</section>
+<section class="section" id="section-about" >
+	<div class="content">
+		<h2 id="txt-title" class="txt-title">¿Qué es Ancaor?</h2>
+		<p class="txt-parrafo">Ancaor en resumen son las iniciales de mi nombre y apellidos lo cual significa son representción mia Anthony Cajacuri Ordoñez, decidí crear dos áreas que representan las cosas que me gustan como la programación y dibujar, estas son LunarCode Dev y Lykrune Art respectivamente.</p>
+		<p class="txt-parrafo">En lo personal considero no tener mucho talento para ambas cosas, pero pongo todo mi esfuerzo en aprenderlas, como motivación usa la frase “El trabajo duro supera al talento cuando el talento no trabaja duro” de Ben Lehner.</p>
+
+		<p class="txt-parrafo2">
+			Si te interesa saber sobre mis habilidades y mas detalles personales dale a mas información,  si deseas saber sobre mis trabajos de arte, diseño ve a la sección lykrune y si deseas saber sobre mis trabajos de programación ve a la sección LunarCode. <br>
+			Sin más que decir , bienvenido a mi mundo. <br> <br>
+			Si tienes alguna consulta dale <a class="btn-normal btn-blue" href="contacto">clic aquí</a>
+		</p>
+	</div>
+</section>
+<section class="section" id="section-lykrune"> 
+	<div class="content">
+		<h1  id="txt-title" class="txt-title">Lykrune Art</h1>
+		<div class="space">
+			<hr>
+		</div>
+		<p class="txt-parrafo">
+			Lykrune Art es el área encargada del diseño y arte.
+		</p>
+		<p class="txt-parrafo">
+			<a class="btn-normal btn-blue" href="http://lykrune.ml">Mas Información</a>
+		</p>
+	</div>
+</section>
+
+<section class="section" id="section-lunarcode">	
+	<h1 class="t-lykrune">LunarCode</h1>
+	<div class="space">
+		<hr>
+	</div>
+	<p class="txt-parrafo">
+			LunarCode Dev es el área encargada de la programación.
+		</p>
+		<p class="txt-parrafo">
+			Esta zona aún esta en desarrollo
+		</p>
+</section>
+
+{% endblock %}

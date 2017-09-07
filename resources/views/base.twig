@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>{% block title %} {% endblock %} - Ancaor</title>
+{% block head %}
+<meta charset="UTF-8">
+<!-- Metas -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<base href="{{BASE}}" target="_self" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="Author" content="{{AUTHOR}}" />
+<meta property='og:locale' content='es_ES'/>
+<meta property='og:type' content='website'/>
+<meta property='og:site_name' content='{{ WEBSITE }}'/>
+<meta property='fb:app_id' content='{{ FB_ID }}'/>
+<meta name="robots" content="index,follow">
+<meta name="description" content="Lykrune, Desing Web">
+<meta name="keywords" content="Lykrune,Design, Diseño Web">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/favicon/Ancaor2017.ico">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#0E2F80">
+<meta name="msapplication-TileImage" content="images/favicon/Ancaor2017.ico">
+<meta name="theme-color" content="#0E2F80">
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap.min.css">
+<!-- Fontello -->
+<link rel="stylesheet" type="text/css" href="./css/fontello/css/fontello.css">
+<!-- ESTILOS -->
+<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+<link rel="stylesheet" type="text/css" href="./css/ancaor/fonts/fonts.css?id={{random()}}">
+<link rel="stylesheet" type="text/css" href="./css/main.css?id={{random()}}">
+{% endblock %}
+</head>
+<body>
+
+	
+{% block content %}{% endblock %}
+<body>
+{% block footer %}
+<div class="footer">
+	<div class="frase-cabecera">
+		<p>{#  <a target="_blank" class="enlace-footer" href="https://www.facebook.com/profile.php?id=100014813495811"><i class="icon-facebook-1"> </i> </a> #}	
+			<a target="_blank"  class="enlace-footer"  href="https://plus.google.com/u/0/115163178064715414276"><i class="icon-google"> </i></a> 
+
+			<a target="_blank"  class="enlace-footer"  href="https://github.com/AncaorLog"><i class="icon-github-circled"> </i></a>
+		</p>
+		<p> Design by <a class="enlace-footer-ext" href=""> Lykrune © </a> License MIT </p>
+		{# 	<p> Lykrune es parte de <a target="_blank" class="enlace-footer-ext" href="http://ancaor.com">Ancaor</a> </p> #}
+		<!-- <p>  Lykrune Web Page 2017</p> -->
+	</div>
+</div>
+<div class="col-lg-12 powered">
+	<div class="row">
+		<div class="col-sm-2 col-lg-1">
+			<p class="txt3">Powered by:</p>	
+			<!-- <p><a target="_blank" class="about-foot" href="about">About</a></p> -->
+		</div>
+		<div class="col-sm-4 col-lg-4">
+			<div class="logo-foot">
+				<img class="img-logo-foot" src="./images/php-icon.png" alt="php-icon">
+				<img class="img-logo-foot" src="./images/html5-icon.png" alt="html5-icon">
+				<img class="img-logo-foot" src="./images/css3-icon.png" alt="css3-icon">
+				<img class="img-logo-foot" src="./images/jq-icon.png" alt="jq-icon">
+				<img class="img-logo-foot" src="./images/bs-icon.png" alt="bs-icon">
+			</div>
+		</div>
+	</div>	    	
+</div>
+{% endblock %}
+<script src="./js/jquery/jquery-3.2.1.min.js"
+type="text/javascript" charset="utf-8"></script>
+<!-- JS -->
+<script src="./js/scroll.js?id={{random()}}"></script>
+<script src="./js/cambios.js?id={{random()}}"></script>
+</body>
+</html>
+
