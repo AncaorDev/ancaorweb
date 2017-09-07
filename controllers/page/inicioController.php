@@ -34,7 +34,7 @@ function mostrar() { //Función que se jecuta al recibir una variable del tipo c
 				std = estado actual de la tabla en la BD, información general, ejem extractData('phrase|std')
 				count = nos mostrara el numero de datos encontrados
 			*/
-			$datos = $this -> ctr -> extractData('phrase|std|count'); // asignación de datos a la variable array
+			$datos = $this -> ctr -> extractData('phrase|count'); // asignación de datos a la variable array
 			$num = mt_rand(0,$datos['count']-1); // genero un número aleatorio 
 			$datos['frase'] = $datos['phrase'][$num]['content_phrase']; // extraigo una frase aleatoria
 			// invoco al metodo estatico de la vista y muestro la vista
