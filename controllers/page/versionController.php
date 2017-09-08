@@ -1,5 +1,4 @@
 <?php 
-/* Código  generado automáticamente por LPanel*/
 /* ======================================================================
 $dp => Datos o Informacion desde la BD a la Página, si $bd esta descativada no enviara nada
 $ctr => Instancia de Controller 
@@ -13,7 +12,7 @@ private $bd;
 private $auth;
 function __construct(){
 	$this -> auth = false; // Si para el acceso necesita estar autenticado
-	$this -> bd = false; // Si se usara la coneción a la base de Datos
+	$this -> bd = false; // Si se usara la conexión a la base de Datos
 	$this -> ctr = new Controller($bd = $this -> bd); // Ejecutamos una instancia hacia el controlador general
 }
 
