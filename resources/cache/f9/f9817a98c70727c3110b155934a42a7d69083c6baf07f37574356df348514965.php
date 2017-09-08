@@ -103,7 +103,7 @@ type=\"text/javascript\" charset=\"utf-8\"></script>
 <link rel=\"manifest\" href=\"/manifest.json\">
 <meta name=\"msapplication-TileColor\" content=\"#0E2F80\">
 <meta name=\"msapplication-TileImage\" content=\"images/favicon/Ancaor2017.ico\">
-<meta name=\"theme-color\" content=\"#0E2F80\">
+<meta name=\"theme-color\" content=\"#FF3131\">
 <!-- Bootstrap -->
 <link rel=\"stylesheet\" type=\"text/css\" href=\"./css/bootstrap/bootstrap.min.css\">
 <!-- Fontello -->
@@ -215,7 +215,7 @@ type=\"text/javascript\" charset=\"utf-8\"></script>
 <link rel=\"manifest\" href=\"/manifest.json\">
 <meta name=\"msapplication-TileColor\" content=\"#0E2F80\">
 <meta name=\"msapplication-TileImage\" content=\"images/favicon/Ancaor2017.ico\">
-<meta name=\"theme-color\" content=\"#0E2F80\">
+<meta name=\"theme-color\" content=\"#FF3131\">
 <!-- Bootstrap -->
 <link rel=\"stylesheet\" type=\"text/css\" href=\"./css/bootstrap/bootstrap.min.css\">
 <!-- Fontello -->

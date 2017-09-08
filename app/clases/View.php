@@ -8,8 +8,8 @@
 			$ruta = self::verificarRuta($ruta);
 			$loader = new Twig_Loader_Filesystem(__DIR__.'/../../resources/views/');
 			$twig = new Twig_Environment($loader,array(
-				'debug' => true,
-				'cache' => '../resources/cache/'
+				'debug' => false,
+				'cache' => false
 			));
 			$twig->addGlobal('BASE', BASE);
 			// $layout = $twig->load(__DIR__.'/../../../resources/views/base.twig');

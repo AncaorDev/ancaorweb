@@ -49,33 +49,18 @@ class __TwigTemplate_a4304d4dd0ee68dcb53488e8e6856b63383ed29f5cb89fd3b695707e9e2
     {
         // line 7
         echo "<section id=\"inicio\">
-\t<div class=\"inicio-cabecera\">
-\t\t<select id=\"change_theme\" >
-\t\t\t\t<option>Cambiar Tema</option>
-\t\t\t\t<option>Normal</option>
-\t\t\t\t<option>White</option>
-\t\t\t\t<option>Sky</option>
-\t\t</select>
-\t\t<h3 class=\"txt-cbc\"> Ancaor </h3>
-\t\t<p class=\"txtsub-cbc\">\"Ama lo que haces\"</p>
-\t</div>
-\t<div>
-\t\t<nav class=\"inicio-nav\" id=\"cbc\">
-\t\t\t<ul>
-\t\t\t\t<li class=\"none\"><a class=\"normal\" href=\"#inicio\">Inicio</a></li>
-\t\t\t\t<li class=\"none\" style=\"display: none\"><a class=\"normal\" href=\"\">  </a></li>
-\t\t\t\t<li class=\"none\"><a class=\"normal\" href=\"#lykrune\"> Lykrune </a></li>
-\t\t\t\t<li class=\"none\"><a class=\"normal\" href=\"#lunarcode\"> LunarCode </a></li>
-\t\t\t</ul>
-\t\t</nav>
-\t</div>
-\t<div class=\"content-cabecera\">
+\t
+\t";
+        // line 9
+        $this->loadTemplate("includes/header.twig", "contacto.twig", 9)->display($context);
+        // line 10
+        echo "\t<div class=\"content-cabecera\">
 \t\t<div class=\"form-contact\">
 \t\t\t<div id=\"content-form\" class=\"col-xs-12 col-md-6 col-md-push-3\">
 \t\t\t\t<form class=\"form-horizontal\">
 \t\t\t\t\t <h2 id=\"\">Contacto</h2>
 \t\t\t\t    ";
-        // line 34
+        // line 16
         echo "\t\t\t\t\t<div class=\"form-group\">
 \t\t\t\t      <label for=\"input\" class=\"col-lg-4 control-label\">Nombre</label>
 \t\t\t\t      <div class=\"col-lg-6\">
@@ -83,9 +68,9 @@ class __TwigTemplate_a4304d4dd0ee68dcb53488e8e6856b63383ed29f5cb89fd3b695707e9e2
 \t\t\t\t      </div>
 \t\t\t\t    </div>
 \t\t\t\t    ";
-        // line 41
+        // line 23
         echo "\t\t\t\t    ";
-        // line 42
+        // line 24
         echo "\t\t\t\t\t<div class=\"form-group\">
 \t\t\t\t      <label for=\"input\" class=\"col-lg-4 control-label\">Correo</label>
 \t\t\t\t      <div class=\"col-lg-6\">
@@ -93,9 +78,9 @@ class __TwigTemplate_a4304d4dd0ee68dcb53488e8e6856b63383ed29f5cb89fd3b695707e9e2
 \t\t\t\t      </div>
 \t\t\t\t    </div>
 \t\t\t\t    ";
-        // line 49
+        // line 31
         echo "\t\t\t\t\t";
-        // line 50
+        // line 32
         echo "\t\t\t\t    <div class=\"form-group\">
 \t\t\t\t      <label for=\"textArea\" class=\"col-lg-4 control-label\">Mensaje</label>
 \t\t\t\t      <div class=\"col-lg-6\">
@@ -104,16 +89,16 @@ class __TwigTemplate_a4304d4dd0ee68dcb53488e8e6856b63383ed29f5cb89fd3b695707e9e2
 \t\t\t\t      </div>
 \t\t\t\t    </div>
 \t\t\t\t    ";
-        // line 58
+        // line 40
         echo "\t\t\t\t    ";
-        // line 59
+        // line 41
         echo "\t\t\t\t     <div class=\"form-group\">
 \t\t\t\t      <div class=\"col-lg-11 col-lg-offset-1\">
 \t\t\t\t        <button type=\"submit\" class=\"btn btn-danger\">Enviar</button>
 \t\t\t\t      </div>
 \t\t\t\t    </div>
 \t\t\t\t    ";
-        // line 65
+        // line 47
         echo "\t\t\t\t</form>
 \t\t\t</div>
 \t\t</div>
@@ -135,7 +120,7 @@ class __TwigTemplate_a4304d4dd0ee68dcb53488e8e6856b63383ed29f5cb89fd3b695707e9e2
 
     public function getDebugInfo()
     {
-        return array (  117 => 65,  110 => 59,  108 => 58,  99 => 50,  97 => 49,  89 => 42,  87 => 41,  79 => 34,  51 => 7,  48 => 6,  42 => 4,  36 => 3,  30 => 2,  11 => 1,);
+        return array (  102 => 47,  95 => 41,  93 => 40,  84 => 32,  82 => 31,  74 => 24,  72 => 23,  64 => 16,  57 => 10,  55 => 9,  51 => 7,  48 => 6,  42 => 4,  36 => 3,  30 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -155,26 +140,8 @@ class __TwigTemplate_a4304d4dd0ee68dcb53488e8e6856b63383ed29f5cb89fd3b695707e9e2
 {% endblock %}
 {% block content %}
 <section id=\"inicio\">
-\t<div class=\"inicio-cabecera\">
-\t\t<select id=\"change_theme\" >
-\t\t\t\t<option>Cambiar Tema</option>
-\t\t\t\t<option>Normal</option>
-\t\t\t\t<option>White</option>
-\t\t\t\t<option>Sky</option>
-\t\t</select>
-\t\t<h3 class=\"txt-cbc\"> Ancaor </h3>
-\t\t<p class=\"txtsub-cbc\">\"Ama lo que haces\"</p>
-\t</div>
-\t<div>
-\t\t<nav class=\"inicio-nav\" id=\"cbc\">
-\t\t\t<ul>
-\t\t\t\t<li class=\"none\"><a class=\"normal\" href=\"#inicio\">Inicio</a></li>
-\t\t\t\t<li class=\"none\" style=\"display: none\"><a class=\"normal\" href=\"\">  </a></li>
-\t\t\t\t<li class=\"none\"><a class=\"normal\" href=\"#lykrune\"> Lykrune </a></li>
-\t\t\t\t<li class=\"none\"><a class=\"normal\" href=\"#lunarcode\"> LunarCode </a></li>
-\t\t\t</ul>
-\t\t</nav>
-\t</div>
+\t
+\t{% include 'includes/header.twig' %}
 \t<div class=\"content-cabecera\">
 \t\t<div class=\"form-contact\">
 \t\t\t<div id=\"content-form\" class=\"col-xs-12 col-md-6 col-md-push-3\">
