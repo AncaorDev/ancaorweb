@@ -13,7 +13,7 @@ private $bd;
 private $auth;
 function __construct(){
 	$this -> auth = false; // Si para el acceso necesita estar autenticado
-	$this -> bd = true; // Si se usara la coneción a la base de Datos
+	$this -> bd = true; // Si se usara la conexión a la base de Datos
 	$this -> ctr = new Controller($bd = $this -> bd); // Ejecutamos una instancia hacia el controlador general
 }
 
