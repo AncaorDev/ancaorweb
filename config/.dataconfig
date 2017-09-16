@@ -7,8 +7,8 @@
 "DEBUG"  : true,
 
 "######" : "Configuración Metas Web",
-"AUTHOR" : "Ancaor",
-
+"AUTHOR" : "Anthony Cajacuri Ordoñez",
+"WEBSITE" : "Ancaor Web",
 "######" : "ID APIS",
 "FB_ID"  : ""
 }
