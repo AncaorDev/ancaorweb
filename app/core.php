@@ -30,7 +30,7 @@ function ejecutar(){
 		   Obtenemos las variables de .dataconfig 
 	--------------------------------------------------- */
 	try {
-		$datos = \readFiles::leerDatos();
+		$data = \readFiles::leerDatos();
 	} catch (Exception $e) {
 		throw $e;
 	}
@@ -50,15 +50,15 @@ function ejecutar(){
 	/* ---------------------------------------------------
 			Constantes del proyecto
 	--------------------------------------------------- */
-	DEFINE('DEBUG',$datos['DEBUG']); // <-- Dirección Host
-	DEFINE('HOST',$datos['HOST']); // <-- Dirección Host
-	DEFINE('USER',$datos['USER']);  // <-- Nombre de Usuario 
-	DEFINE('PASS',$datos['PASS']); // <-- Contraseña para acceso a la Base de Datos
-	DEFINE('DBNAME',$datos['DBNAME']); // <-- Nombre de la Base de Datos
+	DEFINE('DEBUG', $data['DEBUG']); // <-- Dirección Host
+	DEFINE('HOST', $data['HOST']); // <-- Dirección Host
+	DEFINE('USER', $data['USER']);  // <-- Nombre de Usuario 
+	DEFINE('PASS', $data['PASS']); // <-- Contraseña para acceso a la Base de Datos
+	DEFINE('DBNAME', $data['DBNAME']); // <-- Nombre de la Base de Datos
 	DEFINE('HOME', $this -> host); // <-- URL principal
 	DEFINE('BASE', $this -> host); //  <-- Dirección Vistas
-	DEFINE('FB_ID',$datos['FB_ID']); // <-- ID FB
-	DEFINE('AUTHOR',$datos['AUTHOR']); // <-- Autor de la pagina
+	DEFINE('FB_ID', $data['FB_ID']); // <-- ID FB
+
 	DEFINE('COPY','Ancaor &trade;'.' 2015 - '.date('Y')); //<-- Copy Right
 	DEFINE('DIR_LIBS','libs/');  // <-- Dirección de archivos HTML
 	DEFINE('DIR_BS','libs/bootstrap/'); // BOOTSTRAP	
@@ -66,23 +66,20 @@ function ejecutar(){
 	DEFINE('VIEWS','public/views/'); // <-- VIEWS
 	DEFINE('IMAGE','public/resources/images/'); // <-- IMAGES
 	DEFINE('DATE',date('d-Y-m')); // Fecha Servidor 
-	DEFINE('WEBSITE','Ancaor'); // Fecha Servidor 
-	
+	DEFINE('AUTHOR',$data['AUTHOR']); // <-- Autor de la pagina
+	DEFINE('WEBSITE',$data['WEBSITE']);
 
 	/* ---------------------------------------------------
 		Enviamos los datos para Javascript
 	--------------------------------------------------- */
-	$datosjs = ["URL" => $this -> url ];
-	// escribirDatos($datosjs);
+	$datajs = ["URL" => $this -> url ];
+	// escribirDatos($datajs);
 	//Extensión .html o .htm
-	DEFINE('EXT','phtml');
+	// DEFINE('EXT','phtml');
 	/* ---------------------------------------------------
 		Archivos necesario
 	--------------------------------------------------- */
 
-	//URLS 
-	DEFINE('URL_PANEL',$this -> url.'panel/');
-	DEFINE('URL_OTHER',$this -> url.'other/');	
 	if (class_exists('Session')) {
 		\Session::init();
 		DEFINE('SESSION', \Session::exists());
