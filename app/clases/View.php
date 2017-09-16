@@ -1,4 +1,4 @@
-<?php 
+<?php namespace app\clases;
 	class View {	
 		public function __construct(){
 					
@@ -6,12 +6,14 @@
 		public static function renderPage($ruta , $listapage = "",$l = ""){
 			$datos = $l;
 			$ruta = self::verificarRuta($ruta);
-			$loader = new Twig_Loader_Filesystem(__DIR__.'/../../resources/views/');
-			$twig = new Twig_Environment($loader,array(
+			$loader = new \Twig_Loader_Filesystem(__DIR__.'/../../resources/views/');
+			$twig = new \Twig_Environment($loader,array(
 				'debug' => false,
 				'cache' => false
 			));
 			$twig->addGlobal('BASE', BASE);
+			$twig->addGlobal('WEBSITE', WEBSITE);
+			$twig->addGlobal('AUTHOR', AUTHOR);			
 			// $layout = $twig->load(__DIR__.'/../../../resources/views/base.twig');
 			// print_r($datos);
 			$twig->display($ruta.'twig',compact('datos'));		

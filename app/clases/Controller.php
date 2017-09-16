@@ -1,4 +1,4 @@
-<?php 
+<?php namespace app\clases;
 /*===========================================
              Controller
 ===========================================*/
@@ -6,6 +6,7 @@
 Clase que se encarga de recibir los datos según eso mostrar sus vistas correspondientes 
 con la información adecuada.
 */
+
 class Controller {
 /*  
 	Leyenda de las variables

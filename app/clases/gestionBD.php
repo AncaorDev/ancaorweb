@@ -1,6 +1,6 @@
-<?php
+<?php namespace app\clases;
 // Mejorar esta *#$%&$
-class gestionBD extends mysqli {
+class gestionBD extends \mysqli {
   private $conexion;
   private $server=HOST;
   private $usuario=USER;
@@ -21,7 +21,7 @@ class gestionBD extends mysqli {
   /*La funcion conextar es privada*/
   private function conectar(){
     
-      $this->conexion=new mysqli($this->server, $this->usuario, $this->password, $this->base_datos);
+      $this->conexion=new \mysqli($this->server, $this->usuario, $this->password, $this->base_datos);
       // Works as of PHP 5.2.9 and 5.3.0.
       if ($this->conexion->connect_error) {
         if ($this->debug) {
