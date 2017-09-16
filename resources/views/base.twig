@@ -3,7 +3,6 @@
 <head>
 <title>{% block title %} {% endblock %} - Ancaor</title>
 {% block head %}
-<meta charset="UTF-8">
 <!-- Metas -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,15 +12,16 @@
 <meta name="Author" content="{{AUTHOR}}" />
 <meta property='og:locale' content='es_ES'/>
 <meta property='og:type' content='website'/>
+<meta property='og:url' content="{{ BASE }}">
+<meta property='og:image' content="{{BASE}}images/ancaor/logo_ancaor(128x128).png">
 <meta property='og:site_name' content='{{ WEBSITE }}'/>
-<meta property='fb:app_id' content='{{ FB_ID }}'/>
 <meta name="robots" content="index,follow">
 <meta name="description" content="Ancaor, Lykrune Art, RunceCube Dev">
 <meta name="keywords" content="Anthony Cajacuri Ordoñez, Ancaor, Programación, Lykrune, Design, Diseño Web">
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="./images/favicon/Ancaor2017.ico">
 <meta name="msapplication-TileColor" content="#0E2F80">
-<meta name="msapplication-TileImage" content="images/favicon/Ancaor2017.ico">
+<meta name="msapplication-TileImage" content="images/favicon/logo_ancaor(32x32).ico">
 <meta name="theme-color" content="#FF3131">
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap.min.css">
@@ -34,19 +34,18 @@
 {% endblock %}
 </head>
 <body>
-
-	
 {% block content %}{% endblock %}
 <body>
 {% block footer %}
 <div class="footer">
-	<div class="frase-cabecera">
+	<div class="frase-cabecera" itemscope itemtype="http://schema.org/Person">
+		<p><span itemprop="name">Anthony Cajacuri Ordoñez</span></p>
+		<link itemprop="url" href="http://ancaor.com">
 		<p>{#  <a target="_blank" class="enlace-footer" href="https://www.facebook.com/profile.php?id=100014813495811"><i class="icon-facebook-1"> </i> </a> #}	
-			<a target="_blank"  class="enlace-footer"  href="https://plus.google.com/u/0/115163178064715414276"><i class="icon-google"> </i></a> 
-
-			<a target="_blank"  class="enlace-footer"  href="https://github.com/AncaorLog"><i class="icon-github-circled"> </i></a>
+			<a target="_blank" itemprop="sameAs" class="enlace-footer"  href="https://plus.google.com/u/0/115163178064715414276"><i class="icon-google"> </i></a> 
+			<a target="_blank" itemprop="sameAs" class="enlace-footer"  href="https://github.com/AncaorLog"><i class="icon-github-circled"> </i></a>
 		</p>
-		<p> Design by <a class="enlace-footer-ext" href=""> Lykrune © </a> License MIT </p>
+		<p> Design by <a class="enlace-footer-ext" href=""> Lykrune © </a></p>
 		{# 	<p> Lykrune es parte de <a target="_blank" class="enlace-footer-ext" href="http://ancaor.com">Ancaor</a> </p> #}
 		<!-- <p>  Lykrune Web Page 2017</p> -->
 	</div>
@@ -69,9 +68,22 @@
 	</div>	    	
 </div>
 {% endblock %}
-<script src="./js/jquery/jquery-3.2.1.min.js"
-type="text/javascript" charset="utf-8"></script>
-<!-- JS -->
+<script src="./js/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "Organization",
+	  "name" : "Ancaor",
+	  "email" : "contacto@ancaor.com",
+	  "url": "{{ BASE }}",
+	  "logo": "{{ BASE }}images/ancaor/logo_ancaor(128x128).png",
+	  "founder" :"Anthony Cajacuri Ordoñez",
+	  "description" : "Creado con el fin de mostrar mis conocimientos de Programación y Diseño Web"
+	}
+</script>
+<script type="text/javascript" type="application/ld+json" charset="utf-8">
+
+</script>
 <script src="./js/scroll.js?id={{random()}}"></script>
 <script src="./js/cambios.js?id={{random()}}"></script>
 </body>
