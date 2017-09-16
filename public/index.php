@@ -1,4 +1,5 @@
 <?php 
+
 /** Archivo que controla toda la web. 
 * @ Index
 **/ 
@@ -14,7 +15,7 @@ require_once(realpath(__DIR__  . '/../vendor/autoload.php'));
 require_once(realpath(__DIR__ . '/../app/core.php')); 
 
 use app\Core;
-use app\clases\Request;
+use app\manager\Request;
 
 class Index 
 {  
