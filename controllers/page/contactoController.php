@@ -5,6 +5,9 @@ $ctr => Instancia de Controller
 $bd => Si necesita usar la Base de datos true, caso contrario false
 $auth => autenticación (booleano)
 ====================================================================== */
+use app\clases\View;
+use app\clases\Controller;
+
 class contactoController extends Controller {
 private $dp;
 private $ctr;
