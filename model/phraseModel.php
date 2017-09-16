@@ -2,6 +2,9 @@
 /**
 * 
 */
+use app\clases\gestionBD;
+use model\Model;
+
 class phraseModel extends Model{
 	private $con;
 	private $table;
@@ -12,8 +15,6 @@ class phraseModel extends Model{
 		$this -> con = new gestionBD();
 		//Tabla
 		$this -> table = "phrase";
-
-		$this -> con -> state;
 	}
 	function listaDetallesPhrase($id=""){
 		try {
@@ -21,7 +22,7 @@ class phraseModel extends Model{
 				
 			} else {
 				//Consulta
-				$this -> sql = "SELECT * FROM phrase";
+				$this -> sql = "SELECT * FROM {$this -> table}";
 				if ($id != "") { $this -> sql .= " WHERE  ='{$id}'"; }
 				//Ejecución de consulta
 				$lista = $this -> con -> ejecutararray($this -> sql);	
