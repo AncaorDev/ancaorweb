@@ -19,8 +19,8 @@ class ajaxManager
 		new Core();
 	}
 	public function ejecutar($m){
-		if (file_exists('../ajax/' . $m . '.php')) {
-        	require('../ajax/'. $m .'.php');
+		if (file_exists(__DIR__.'/' . $m . '.php')) {
+        	require(__DIR__.'/'. $m .'.php');
         	$datos = [];
 			// Registramos todas las variables Post
 			foreach($_POST as $nombre_campo => $valor){ 
@@ -29,8 +29,11 @@ class ajaxManager
 			   eval($asignacion); 
 			}
 			$m = "ajax\\".$m;
-			$om = new $m; 
-        	echo json_encode($om->Retorno($datos));
-      	} 
+			$om = new $m(); 
+        	return $om->Retorno($datos);
+      	} else {
+      		$data['error'] = "File not found";
+      		return $data;
+      	}
 	}
 }

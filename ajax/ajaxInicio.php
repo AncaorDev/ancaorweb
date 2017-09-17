@@ -8,7 +8,8 @@ use controllers\page\inicioController;
 class ajaxInicio extends inicioController 
 {
 	public function Retorno($datos="") {
-		return parent::obtenerFrase();
+		$frase =  parent::obtenerFrase();
+		return array('frase' => $frase ,'error' => false );
 	}
 }
 
