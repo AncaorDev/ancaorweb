@@ -107,6 +107,12 @@
       "css": "github-1",
       "code": 59403,
       "src": "elusive"
+    },
+    {
+      "uid": "7e4164950ffa4990961958b2d6318658",
+      "css": "info-circled",
+      "code": 59404,
+      "src": "entypo"
     }
   ]
 }
