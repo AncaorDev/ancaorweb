@@ -1,4 +1,4 @@
-<?php 
+<?php namespace controllers\error;
 /* Código  generado automáticamente por LidPanel*/
 /* ======================================================================
 $dp => Datos o Informacion desde la BD a la Página, si $bd esta descativada no enviara nada

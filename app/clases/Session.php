@@ -1,4 +1,4 @@
-<?php 
+<?php namespace app\clases;
 class Session{
 	static function init(){
 		@session_start();

@@ -1,4 +1,4 @@
-<?php 
+<?php namespace controllers\page;
 /* ======================================================================
 $dp => Datos o Informacion desde la BD a la Página, si $bd esta descativada no enviara nada
 $ctr => Instancia de Controller 
@@ -7,6 +7,8 @@ $auth => autenticación (booleano)
 ====================================================================== */
 use app\clases\View;
 use app\clases\Controller;
+use model\phraseModel;
+use model\pageModel;
 
 class inicioController extends Controller {
 private $dp;
@@ -41,6 +43,7 @@ function mostrar() { //Función que se jecuta al recibir una variable del tipo c
 			$datos['frase'] = $datos['phrase'][$num]['content_phrase']; // extraigo una frase aleatoria
 			// invoco al metodo estatico de la vista y muestro la vista
 			View::renderPage('inicio',$this -> ctr -> ld,$datos);
+
 			// ---------------------------------------------------------------- //
 		}
 	} else {
@@ -53,6 +56,12 @@ function subAcceso($dato){
 	********************** Code for user **********************
 	******************************************************** */
 
+}
+
+function obtenerFrase(){
+	$datos = $this -> ctr -> extractData('phrase|count'); // asignación de datos a la variable array
+	$num = mt_rand(0,$datos['count']-1); // genero un número aleatorio 
+	return $datos['frase'] = $datos['phrase'][$num]['content_phrase']; // extraigo una frase aleatoria
 }
 // Fin class
 }

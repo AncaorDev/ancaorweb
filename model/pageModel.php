@@ -1,8 +1,9 @@
-<?php 
+<?php namespace model;
 /**
 * extends Model
 */
 use app\clases\gestionBD;
+use model\Model;
 
 class pageModel 
 {

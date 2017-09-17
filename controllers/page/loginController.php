@@ -1,4 +1,4 @@
-<?php 
+<?php namespace controllers\page;
 /* ======================================================================
 $dp => Datos o Informacion desde la BD a la Página, si $bd esta descativada no enviara nada
 $ctr => Instancia de Controller 

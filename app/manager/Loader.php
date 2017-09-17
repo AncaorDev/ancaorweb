@@ -2,6 +2,7 @@
 /**
 * 
 */
+use app\clases\Functions;
 class Loader 
 {
 	private $data;
@@ -9,7 +10,8 @@ class Loader
 	{
 		
 	}
-	public static function filterController($data){
+	public static function filterController($data,$view = true){
+		$functions = new Functions();
 		$cant = strlen($data);
 	    if ($cant > 0) {
 	      // Si es mayor de 0 comprabamos que exista en la carpeta page.
@@ -17,25 +19,21 @@ class Loader
 	        // Si el archivo existe lo requerimos.
 	        require_once(__DIR__.'/../../controllers/page/'.$data.'Controller.php');
 	        // Asignamos nuestro controlador. 
-	        $controller = $data.'Controller';  
+	        $controller = 'controllers\page\\'.$data.'Controller';  
 	      } else if ($data == 'index' or $data == 'index.php'){
-	        redirect('inicio');
+	        Functions::redirect('inicio');
 	      }else {
 	        require(__DIR__.'/../../controllers/error/error404Controller.php');
-	        $controller = 'error404Controller';  
+	        $controller = 'controllers\error\error404Controller';  
 	      }  
-	    } else if ($cant === 0 or $cant == ''){
-	        require_once(__DIR__.'/../../controllers/page/inicioController.php');
-	        $controller = 'inicioController';
-	         // Caso de no tener datos lo redirigimos a inicio
-	        // redirect('inicio');
-	    } else {
-	        require(__DIR__.'/../../controllers/error/error404Controller.php');
-	        $controller = 'error404Controller';  
-	    }
+	    } 
 	    self::host();
 	    $vista = new $controller();
-	    $vista -> mostrar(); 
+	    if ($view) {
+	    	$vista -> mostrar(); 
+	    } else {
+	    	return $vista;
+	    }
 	}
 
 	private static function host(){

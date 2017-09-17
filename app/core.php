@@ -18,9 +18,7 @@ function ejecutar(){
 		$NombreClase = str_replace('\\', '/' , $NombreClase);
 		if (file_exists(__DIR__.'/../model/' . $NombreClase . '.php')) {
 			require_once __DIR__.'/../model/' . $NombreClase . '.php';
-		} else if (file_exists(__DIR__.'/clases/'.$NombreClase . '.php')){
-			require_once __DIR__.'/clases/'.$NombreClase . '.php';
-		} else if (file_exists(realpath(__DIR__.'/../'.$NombreClase.'.php'))){
+		}  else if (file_exists(realpath(__DIR__.'/../'.$NombreClase.'.php'))){
 			include_once realpath(__DIR__.'/../'.$NombreClase.'.php');
 		} else {
 			echo "Not found class archive $NombreClase " . " Error en core.php línea : " . __LINE__ . "</br>";
@@ -30,7 +28,7 @@ function ejecutar(){
 		   Obtenemos las variables de .dataconfig 
 	--------------------------------------------------- */
 	try {
-		$data = \readFiles::leerDatos();
+		$data = clases\readFiles::leerDatos();
 	} catch (Exception $e) {
 		throw $e;
 	}
@@ -80,9 +78,9 @@ function ejecutar(){
 		Archivos necesario
 	--------------------------------------------------- */
 
-	if (class_exists('Session')) {
-		\Session::init();
-		DEFINE('SESSION', \Session::exists());
+	if (class_exists('app\clases\Session')) {
+		clases\Session::init();
+		DEFINE('SESSION', clases\Session::exists());
 	} else {
 		echo "Error en la clase Sesion\rPor favor verificar";
 	}

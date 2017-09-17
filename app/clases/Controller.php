@@ -77,7 +77,7 @@ static public function verificarData($data){
 
 static public function obtnerLista($data,$id){
 	try {
-		$model = strtolower($data['model'])."Model";
+		$model = 'model\\'.strtolower($data['model'])."Model";
 		$compilated = [];
 		if (class_exists($model)) {
 			$datamodel = new $model();
