@@ -19,12 +19,12 @@ use app\manager\Request;
 
 class Index 
 {  
-  public static function ejecutar(){    
+  public static function run(){    
     // Ejecutamos core para obtener toda información necesaria para el uso de la APP
     new Core();
     // Ejecutamos Request para mostrar resultados según la URL
     new Request();
   }
 }
-Index::ejecutar();
+Index::run();
 app\Server::endTime();
