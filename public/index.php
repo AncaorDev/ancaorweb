@@ -3,8 +3,8 @@
 /** Archivo que controla toda la web. 
 * @ Index
 **/ 
-require_once(realpath(__DIR__ . '/../app/server.php'));
-app\Server::Time(); 
+require_once(realpath(__DIR__ . '/../app/time.php'));
+app\Time::Time(false); 
 /* ---------------------------------------------------
 Archivo Gestor de dependencias 
 --------------------------------------------------- */
@@ -27,4 +27,4 @@ class Index
   }
 }
 Index::run();
-app\Server::endTime();
+app\Time::endTime();
