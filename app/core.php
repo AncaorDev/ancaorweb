@@ -36,15 +36,14 @@ function ejecutar(){
 		Obtenemos el host en la cual esta el proyecto
 	--------------------------------------------------- */
 	$https = (!empty($_SERVER['HTTPS']) ? 'https' : 'http');
-	
 	if (stristr($_SERVER["HTTP_HOST"], "localhost") === false) {
 		$this -> host = $https . '://' . $_SERVER["HTTP_HOST"] .'/';
 	} else {
 		$urldata = explode('/', $_SERVER['SCRIPT_NAME']);
 		$folder = $urldata[1];
-		$this -> host = $https . '://' . $_SERVER["HTTP_HOST"] .'/' . $folder . '/' ;
+		$this -> host = $https . '://' . $_SERVER["HTTP_HOST"] .'/' . $folder . '/public/' ;
 	}
-	
+	clases\Log::error($this -> host); 
 	/* ---------------------------------------------------
 			Constantes del proyecto
 	--------------------------------------------------- */

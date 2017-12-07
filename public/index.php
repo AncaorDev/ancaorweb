@@ -24,7 +24,7 @@ class Index
     // Ejecutamos core para obtener toda información necesaria para el uso de la APP
     new Core();
     // Ejecutamos Request para mostrar resultados según la URL
-    new Request();   
+    new Request(); 
   }
 }
 Index::ejecutar();
