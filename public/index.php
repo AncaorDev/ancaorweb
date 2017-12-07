@@ -16,6 +16,7 @@ require_once(realpath(__DIR__ . '/../app/core.php'));
 
 use app\Core;
 use app\manager\Request;
+use app\clases\Log;
 
 class Index 
 {  
@@ -23,7 +24,7 @@ class Index
     // Ejecutamos core para obtener toda información necesaria para el uso de la APP
     new Core();
     // Ejecutamos Request para mostrar resultados según la URL
-    new Request();
+    new Request();   
   }
 }
 Index::ejecutar();

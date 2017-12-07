@@ -12,7 +12,7 @@ function ejecutar(){
 	error_reporting(0);
 	date_default_timezone_set("America/Lima");
 	/* ---------------------------------------------------
-		Autoregistro de los modelos
+	Autoregistro de los modelos
 	--------------------------------------------------- */
 	spl_autoload_register( function( $NombreClase ) {
 		$NombreClase = str_replace('\\', '/' , $NombreClase);
@@ -44,25 +44,24 @@ function ejecutar(){
 		$folder = $urldata[1];
 		$this -> host = $https . '://' . $_SERVER["HTTP_HOST"] .'/' . $folder . '/' ;
 	}
-
+	
 	/* ---------------------------------------------------
 			Constantes del proyecto
 	--------------------------------------------------- */
-	DEFINE('DEBUG', $data['DEBUG']); // <-- Dirección Host
-	DEFINE('HOST', $data['HOST']); // <-- Dirección Host
-	DEFINE('USER', $data['USER']);  // <-- Nombre de Usuario 
-	DEFINE('PASS', $data['PASS']); // <-- Contraseña para acceso a la Base de Datos
-	DEFINE('DBNAME', $data['DBNAME']); // <-- Nombre de la Base de Datos
-	DEFINE('HOME', $this -> host); // <-- URL principal
-	DEFINE('BASE', $this -> host); //  <-- Dirección Vistas
-	DEFINE('FB_ID', $data['FB_ID']); // <-- ID FB
+	DEFINE('DEBUG',	 	$data['DEBUG']); // <-- Dirección Host
+	DEFINE('HOST', 		$data['HOST']); // <-- Dirección Host
+	DEFINE('USER', 		$data['USER']);  // <-- Nombre de Usuario 
+	DEFINE('PASS', 		$data['PASS']); // <-- Contraseña para acceso a la Base de Datos
+	DEFINE('DBNAME',	$data['DBNAME']); // <-- Nombre de la Base de Datos
+	DEFINE('HOME', 		$this -> host); // <-- URL principal
+	DEFINE('BASE', 		$this -> host); //  <-- Dirección Vistas
+	DEFINE('FB_ID', 	$data['FB_ID']); // <-- ID FB
 
 	DEFINE('COPY','Ancaor &trade;'.' 2015 - '.date('Y')); //<-- Copy Right
 	DEFINE('DIR_LIBS','libs/');  // <-- Dirección de archivos HTML
 	DEFINE('DIR_BS','libs/bootstrap/'); // BOOTSTRAP	
-	DEFINE('DIR_RS','public/resources/'); // RESOURCES
-	DEFINE('VIEWS','public/views/'); // <-- VIEWS
-	DEFINE('IMAGE','public/resources/images/'); // <-- IMAGES
+	DEFINE('DIR_RS','./'); // RESOURCES
+	DEFINE('IMAGE','./images/'); // <-- IMAGES
 	DEFINE('DATE',date('d-Y-m')); // Fecha Servidor 
 	DEFINE('AUTHOR',$data['AUTHOR']); // <-- Autor de la pagina
 	DEFINE('WEBSITE',$data['WEBSITE']);
