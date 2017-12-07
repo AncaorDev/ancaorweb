@@ -3,8 +3,8 @@
 /** Archivo que controla toda la web. 
 * @ Index
 **/ 
-require_once(realpath(__DIR__ . '/../app/server.php'));
-app\Server::Time(); 
+require_once(realpath(__DIR__ . '/../app/time.php'));
+app\Time::Time(false); 
 /* ---------------------------------------------------
 Archivo Gestor de dependencias 
 --------------------------------------------------- */
@@ -20,12 +20,12 @@ use app\clases\Log;
 
 class Index 
 {  
-  public static function ejecutar(){    
+  public static function run(){    
     // Ejecutamos core para obtener toda información necesaria para el uso de la APP
     new Core();
     // Ejecutamos Request para mostrar resultados según la URL
     new Request(); 
   }
 }
-Index::ejecutar();
-app\Server::endTime();
+Index::run();
+app\Time::endTime();

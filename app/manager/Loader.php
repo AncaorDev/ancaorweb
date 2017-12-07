@@ -30,7 +30,7 @@ class Loader
 	    self::host();
 	    $vista = new $controller();
 	    if ($view) {
-	    	$vista -> mostrar(); 
+	    	$vista -> index(); 
 	    } else {
 	    	return $vista;
 	    }
