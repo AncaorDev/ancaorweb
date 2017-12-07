@@ -13,7 +13,7 @@ class Log
 				throw new \Exception("No se creo archivo Log");	
 			} 
 			fclose($ddf); 
-		} catch (Exception $e) {
+		} catch (\Exception $e) {
 			echo  $e->getMessage();
 		}
 	} 
