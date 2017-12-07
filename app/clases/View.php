@@ -44,14 +44,11 @@
 						for ($i=0; $i+1 < $arrayCant; $i++) { 
 							$ruta .= '/'.$arrayData[$i+1];
 						}
-					} else {
-
-					}
+					} 
 				return $ruta.'.';
 				}
 			} catch (Exception $e) {
-				throw new Exception("Error Processing Request", 1);
-				
+				echo $e->getMessage();
 			}
 		}
 	}
