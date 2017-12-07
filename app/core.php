@@ -30,7 +30,7 @@ function ejecutar(){
 	try {
 		$data = clases\readFiles::leerDatos();
 	} catch (Exception $e) {
-		throw $e->getMessage();
+		throw $e->getMessage(); 
 	}
 	/* ---------------------------------------------------
 		Obtenemos el host en la cual esta el proyecto
