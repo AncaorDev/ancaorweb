@@ -43,7 +43,6 @@ function ejecutar(){
 		$folder = $urldata[1];
 		$this -> host = $https . '://' . $_SERVER["HTTP_HOST"] .'/' . $folder . '/public/' ;
 	}
-	clases\Log::error($this -> host); 
 	/* ---------------------------------------------------
 			Constantes del proyecto
 	--------------------------------------------------- */
