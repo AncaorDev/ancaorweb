@@ -1,0 +1,30 @@
+{
+  "name": "ancaor",
+  "version": "0.0.0",
+  "description": "proyecto ancaor",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AncaorLog/ancaorweb.git"
+  },
+  "keywords": [
+    "ancaor"
+  ],
+  "author": "Anthony",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AncaorLog/ancaorweb/issues"
+  },
+  "homepage": "https://github.com/AncaorLog/ancaorweb#readme"
+}
