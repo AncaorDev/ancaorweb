@@ -1,17 +1,12 @@
 <?php namespace app\manager;
-/**
-* 
-*/
+
 use app\clases\Functions;
+use app\clases\Log;
+
 class Loader 
 {
 	private $data;
-	function __construct()
-	{
-		
-	}
-	public static function filterController($data,$view = true){
-		$functions = new Functions();
+	public static function filterController($data,$view = true) {
 		$cant = strlen($data);
 	    if ($cant > 0) {
 	      // Si es mayor de 0 comprabamos que exista en la carpeta page.
@@ -39,7 +34,6 @@ class Loader
 	private static function host(){
 	    // Obtenemos el Servidor , en caso de server local sera => http://localhost 
 	    $host= $_SERVER["HTTP_HOST"];
-
 	    // Obentenos la URL, ejemplo al ser inicio sera => /ancaor2017/inicio
 	   	$url= $_SERVER["REQUEST_URI"];
 	    //Puede comprobarse descomentando la siguiente linea.

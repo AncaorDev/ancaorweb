@@ -1,3 +1,4 @@
 known/
 .phpintel/
 app/log/
+vendor/

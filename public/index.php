@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 /** Archivo que controla toda la web. 
 * @ Index
 **/ 
@@ -20,12 +19,13 @@ use app\clases\Log;
 
 class Index 
 {  
-  public static function run(){    
-    // Ejecutamos core para obtener toda información necesaria para el uso de la APP
-    new Core();
-    // Ejecutamos Request para mostrar resultados según la URL
-    new Request(); 
-  }
+  	static function run() {    
+	    // Ejecutamos core para obtener toda información necesaria para el uso de la APP
+	    new Core();
+	    // Ejecutamos Request para mostrar resultados según la URL
+	    new Request(); 
+	    
+  	}
 }
 Index::run();
 app\Time::endTime();

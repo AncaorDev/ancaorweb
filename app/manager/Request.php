@@ -1,6 +1,8 @@
 <?php namespace app\manager;
+
 use app\clases\Functions;
 use app\manager\Loader;
+use app\clases\Log;
 
 class Request{
 	private $controller;
