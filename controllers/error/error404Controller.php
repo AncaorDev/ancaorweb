@@ -20,7 +20,7 @@ function __construct(){
 	$this -> ctr = new Controller($bd = $this -> bd);
 }
 
-function mostrar() {
+function index() {
 	if ($this -> authenticate($this -> auth)) {
 		if (isset($_GET['subpage'])) {
 

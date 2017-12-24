@@ -4,8 +4,12 @@
   "description": "proyecto ancaor",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
-    "gulp": "^3.9.1"
+    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap-material-design": "^4.0.0-beta.4",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.6",
+    "tether": "^1.4.3"
   },
   "devDependencies": {
     "font-awesome": "^4.7.0",
