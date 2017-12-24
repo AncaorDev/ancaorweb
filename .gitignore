@@ -3,3 +3,4 @@ known/
 app/log/
 vendor/
 node_modules/
+public/libs
