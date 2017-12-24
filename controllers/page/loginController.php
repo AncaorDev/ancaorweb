@@ -19,7 +19,7 @@ function __construct(){
 	$this -> ctr = new Controller($bd = $this -> bd); // Ejecutamos una instancia hacia el controlador general
 }
 
-function mostrar() { //Función que se jecuta al recibir una variable del tipo controlador
+function index() { //Función que se jecuta al recibir una variable del tipo controlador
 	if (parent::authenticate($this -> auth)) { // Aquí la vista en caso de que el acceso necesite autenticación
 		if (isset($metodo)) { 
 			if ($metodo != "") {

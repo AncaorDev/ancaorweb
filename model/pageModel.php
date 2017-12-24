@@ -27,7 +27,23 @@ class pageModel
 	}
 	public function listaDetallesPage($id = ""){
 		try {
-			$sql = "SELECT page.id_Page , page.title_Page , page.state_Page ,templatepage.code_TemplatePage, page.slug_Page , attributepage.id_AttributePage , attributepage.name_AttributePage, user.id_User ,user.name_User, page.order_Page FROM page INNER JOIN attributepage ON page.id_AttributePage=attributepage.id_attributepage INNER JOIN USER ON page.id_User=user.id_User INNER JOIN templatepage ON page.id_TemplatePage=templatepage.id_TemplatePage";
+			$sql = "SELECT page.id_Page, 
+						   page.title_Page, 
+						   page.state_Page,
+						   templatepage.code_TemplatePage,
+						   page.slug_Page, 
+						   attributepage.id_AttributePage,
+						   attributepage.name_AttributePage, 
+						   user.id_User,
+						   user.name_User, 
+						   page.order_Page 
+					FROM page 
+					INNER JOIN attributepage 
+						ON page.id_AttributePage=attributepage.id_attributepage 
+					INNER JOIN USER 
+						ON page.id_User=user.id_User 
+					INNER JOIN templatepage 
+						ON page.id_TemplatePage=templatepage.id_TemplatePage";
 			$det = false; // 0
 			if ($id != "") {
 				$sql .= " WHERE page.slug_Page ='{$id}'"; 

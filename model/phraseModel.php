@@ -16,7 +16,8 @@ class phraseModel extends Model{
 		//Tabla
 		$this -> table = "phrase";
 	}
-	function listaDetallesPhrase($id=""){
+
+	function listaDetallesPhrase($id="") {
 		try {
 			if (isset($this -> con -> state)) {
 				
@@ -33,7 +34,8 @@ class phraseModel extends Model{
 			throw $ex;
 		}
 	}
-	public function statusTable(){
+
+	public function statusTable() {
 		try {
 			$this -> sql = "SHOW TABLE STATUS LIKE '{$this -> table}'";	
 			return  $lista = $this -> con -> ejecutararray($this -> sql);
