@@ -2,3 +2,4 @@ known/
 .phpintel/
 app/log/
 vendor/
+node_modules/
