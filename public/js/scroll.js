@@ -47,7 +47,7 @@ window.onscroll =  function(){
 			}
 		}
 	}
-	var nav = document.getElementById("cbc");
+	var nav = document.getElementById("nav-anc");
 	console.log(scroll);
 	if (scroll >= 80) {		
 		nav.classList.add("fixed");

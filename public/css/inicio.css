@@ -1,63 +1,25 @@
-.frase{
-	width: 100%;
-	margin-top: 12px;
-	margin-bottom: 16px;
-	padding-top: 10px;
-	display: inline-block;
-	background-color: rgba(127, 127, 127,.8);
-}
-.txt-frase{
-	font-size: 1.9rem;
-	color: rgb(255, 255, 255);
-	/*text-shadow: -0.5px -0.5px 2px rgb(255, 255, 255); */
-	font-weight: bolder;
-}
+:root {
+	--s_t  : 1.4rem;
+	--s_p1 : 1.0rem;
+	--s_p2 : 0.8rem;
 
-.text-frase{
-	width: 100%;
-    padding-top:10px; 
-    padding-bottom:10px; 
-    letter-spacing: 3px;
-    font-size:1.3rem;
-    color: rgb(255, 255, 255);
-    font-family: 'PT Sans';
-    font-weight: 800;
-/*    text-shadow:
-   -0.9px -0.9px 0 #fff,
-    0.9px -0.9px 0 #fff,
-   -0.9px 0.9px 0 #fff,
-    0.9px 0.9px 0 #fff;*/
 }
-@media(min-width: 768px) {
-    .content-cabecera {
-	    /*margin-top: 68px;*/
-	    text-align: center;
-    }
-    .text-frase{
-    	width: 80%;
-    	display: inline-block;
-		padding-left: 16px; 
-    	padding-right: 16px; 
-	    font-size:2.1rem;
-	    /*text-shadow:
-	   -1.4px -1.4px 0 #fff,
-	    1.4px -1.4px 0 #fff,
-	   -1.4px 1.4px 0 #fff,
-	    1.4px 1.4px 0 #fff;*/
-    }
-}
-
-#change_phrase{
-	position: absolute;
-	/*display: block;*/
-	font-size: 10px;
-	margin-left: 200px;
-}
-
-
 #section-about{
 	height: 100%;
 	background: url(../images/virtual.jpg);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-body-about {
+    background: var(--card-principal) !important;
+    color:white;
+}
+  
+
+#card-about .card-footer {
+    background: var(--card-principal)!important;
 }
 
 .section{
@@ -88,7 +50,6 @@
     /*background-color: rgb(70, 111, 173);*/
     border-radius: 50%;
     color: rgb(255, 49, 49);
-    font-size:4.2rem;
    /* text-shadow:
    -1px -1px 0 rgb(14, 47, 105),
     1px -1px 0 rgb(14, 47, 105),
@@ -175,7 +136,7 @@
     text-transform:uppercase;
     -webkit-text-fill-color: white;
     -webkit-text-stroke: 1px white;
-	font-size:4.2rem;
+	font-size:1.6rem;
    /* text-shadow:
    -4px -4px 0 #fff,
     4px -4px 0 #fff,
@@ -188,7 +149,7 @@
 	padding-top: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
-	font-size: 1.9rem;
+	font-size: var(--s_p1);
 	color: rgb(255,255,255);
 	text-align: center;
 	margin-top: 0;
@@ -198,14 +159,14 @@
 	padding-top: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
-	font-size: 2.1rem;
+	font-size: var(--s_p2);
 	color: rgb(255,255,255);
 	text-align: center;
 }
 
 @media(max-width: 720px){
 	.txt-title {
-		font-size:2.6rem;
+		font-size:1.2rem;
 		padding-top: 70px;
 		margin-top: 0;
 	}
