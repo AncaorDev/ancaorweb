@@ -29,13 +29,13 @@
 </style>
 {% endblock %}
 {% block content %}
-<section id="inicio">
+<section id="inicio" for="inicio">
 	{% include 'includes/header.twig' %}
 	<div class="container">
 		<div class="row justify-content-md-center">
 			<div id="card-principal" class="card text-center fondo_none col-sm-6">
 			  <div class="card-header fondo_none">
-			    <div id="logo-body" class="logo-body animate-left">
+			    <div id="logo-body" class="logo-body animate-bottom">
 					<img src="./images/ancaor/logo_ancaor(128x128).png" alt="Ancaor Logo">
 				</div>
 				<!-- <a href="#section-about" class="btn-normal btn-inicio txt-about"> Sobre Ancaor </a> -->
@@ -54,7 +54,7 @@
 		</div>
 	</div>
 </section>
-<section class="section" id="section-about" >
+<section class="section" id="section-about" for="inicio">
 	<div class="container">
 		<div class="row" style="display: flex;justify-content: center;align-items: center;">
 			<div class="col-md-3">

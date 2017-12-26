@@ -7,7 +7,7 @@
 @import 'https://fonts.googleapis.com/css?family=Hammersmith+One';
 @import 'https://fonts.googleapis.com/css?family=Russo+One';
 @import 'https://fonts.googleapis.com/css?family=Passion+One';
-@import './animaciones.css');
+@import url('./animaciones.css');
 /* VARIABLES */
 
 :root {
@@ -97,12 +97,16 @@ a:focus{
 ======== FIN-PRINCIPALES =========
 */
 
-
+/*
 ======== FIXED =========
 */
 .fonty{
-    background-color: white;
-    color: red !important;
+    border-radius: 50%;
+    padding: 2px;
+    color: var(--color_ancaor) !important;
+    text-transform: none;
+    font-size: 1.01rem !important; 
+    background-color: white !important;
     font-weight: 200 !important;
 }
 .fixed {
@@ -194,6 +198,7 @@ a:focus{
 
 #nav-anc {
     background: var(--color_ancaor);
+    transition: 0.3s;
 }
 
 .link_anc {
