@@ -4,7 +4,6 @@
   "description": "proyecto ancaor",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
     "bootstrap-material-design": "^4.0.0-beta.4",
     "gulp": "^3.9.1",
     "jquery": "^3.2.1",
@@ -12,6 +11,7 @@
     "tether": "^1.4.3"
   },
   "devDependencies": {
+    "bootstrap": "^4.0.0-beta.2",
     "font-awesome": "^4.7.0",
     "gulp-sass": "^3.1.0"
   },

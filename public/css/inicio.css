@@ -1,7 +1,12 @@
 :root {
-	--s_t  : 1.4rem;
 	--s_p1 : 1.0rem;
 	--s_p2 : 0.8rem;
+	--s_p3 : 0.6rem;
+	--s_p4 : 0.4rem;
+	--s_t1 : 1.2rem;
+	--s_t2 : 1.0rem;
+	--s_t3 : 0.8rem;
+	--s_t4 : 0.6rem;
 
 }
 #navbarColor01 .enfixed{
@@ -54,12 +59,19 @@
     /*background-color: rgb(70, 111, 173);*/
     border-radius: 50%;
     color: rgb(255, 49, 49);
+    font-size:2.1rem;
    /* text-shadow:
    -1px -1px 0 rgb(14, 47, 105),
     1px -1px 0 rgb(14, 47, 105),
    -1px 1px 0 rgb(14, 47, 105),
     1px 1px 0 rgb(14, 47, 105);*/
     /*box-shadow:  1px 2px 4px black;*/
+}
+.img-mark {
+	width:100%;
+}
+.img-mark  > img{
+	width:100%;
 }
 @media (max-width: 720px){
 	#section-about{
@@ -69,13 +81,22 @@
 		font-size: 1.4rem;
 	}
 	#icon-down{
-		font-size:3.4rem;
+		padding: 4px 0px 4px 0px;
+		font-size:1.8rem;
+		padding-bottom: 2px;
 	}
 	#change_phrase{
 		position: relative;
 		/*display: block;*/
 		font-size: 10px;
 		margin-left: 0px;
+	}
+	.img-mark {
+		padding-top: 60px;
+		text-align: center;
+	}
+	.img-mark  > img{
+		width:35%;
 	}
 }
 .btn-normal{
@@ -163,22 +184,22 @@
 	padding-top: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
-	font-size: var(--s_p2);
+	font-size: var(--s_p1);
 	color: rgb(255,255,255);
 	text-align: center;
 }
 
 @media(max-width: 720px){
 	.txt-title {
-		font-size:1.2rem;
+		font-size:var(--s_t2);
 		padding-top: 70px;
 		margin-top: 0;
 	}
 	.txt-parrafo{
-		font-size: 1.6rem;
+		font-size: var(--s_p2);
 	}
 	.txt-parrafo2{
-		font-size: 1.6rem;
+		font-size: var(--s_p2);
 	}
 }
 
@@ -237,4 +258,4 @@
     background-attachment: fixed;
     /*padding-top: 20px;*/
     /*background-color: rgb(255, 255, 255);*/
-    }  
+}  

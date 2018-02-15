@@ -11,6 +11,7 @@
 /* VARIABLES */
 
 :root {
+    --color_prueba   :black;
     --color_ancaor   :rgb(255, 49, 49);
     --letras         :rgb(255, 255, 255);
     --card-principal : rgb(41, 43, 44);
@@ -101,7 +102,7 @@ a:focus{
 ======== FIXED =========
 */
 .fonty{
-    border-radius: 50%;
+    border-radius: 2px;
     padding: 2px;
     color: var(--color_ancaor) !important;
     text-transform: none;
@@ -113,7 +114,7 @@ a:focus{
     top:0;
     /*background-color: rgb(70, 111, 160);*/
     background-color: rgb(0,0,0);
-    padding: 0px 0 12px 0;
+    padding: 6px 0 6px 0;
     width: 100%;
     z-index: 9999;
     position: fixed;
@@ -175,7 +176,14 @@ a:focus{
     justify-content: center;
     align-items: center;
 }
-
+.navbar-nav .nav-link {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.navbar .nav-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 .head_anc-content {
     padding-top: 4px; 
     padding-top: 4px; 
@@ -230,9 +238,33 @@ a:focus{
 #card-principal .card-footer {
     background: var(--card-principal);
 }
-#icon-down {
-   color: var(--color_ancaor); 
-   font-size: 1.7rem;
+
+
+.footer {
+    padding: 10px;
+     background: var(--card-principal);
+     color: white;
+}
+
+.cabecera-footer {
+    height: 100%;
+}
+
+.cabecera-footer p{
+    text-align: center;
+}
+
+.redes-sociales {
+    text-align: center;
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.enlace-footer-ext {
+    color: rgba(255,255,255,.5);
+}
+.redes-sociales > a{
+    color: white;
 }
 /* ==========================================================================
    Media Queries

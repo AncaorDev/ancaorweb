@@ -35,7 +35,7 @@
 		<div class="row justify-content-md-center">
 			<div id="card-principal" class="card text-center fondo_none col-sm-6">
 			  <div class="card-header fondo_none">
-			    <div id="logo-body" class="logo-body animate-bottom">
+			    <div id="logo-body" class="logo-body animate-bottom d-none d-sm-block">
 					<img src="./images/ancaor/logo_ancaor(128x128).png" alt="Ancaor Logo">
 				</div>
 				<!-- <a href="#section-about" class="btn-normal btn-inicio txt-about"> Sobre Ancaor </a> -->
@@ -57,8 +57,8 @@
 <section class="section" id="section-about" for="inicio">
 	<div class="container">
 		<div class="row" style="display: flex;justify-content: center;align-items: center;">
-			<div class="col-md-3">
-				<img style="width:100%;" src="./images/svg/question-mark.svg" alt="">
+			<div class="img-mark col-md-3">
+				<img src="./images/svg/question-mark.svg" alt="">
 			</div>
 			<div class="col-md-9">
 				<div id="card-about"  class="card w-100 fondo_none">
@@ -71,7 +71,7 @@
 						<p class="txt-parrafo">
 					Si te interesa saber sobre mis habilidades y mas detalles personales dale a mas información,  si deseas saber sobre mis trabajos de arte, diseño ve a la sección lykrune y si deseas saber sobre mis trabajos de programación ve a la sección LunarCode. <br>
 					Sin más que decir , bienvenido a mi mundo. <br> <br>
-					Si tienes alguna consulta dale <a class="btn-normal btn-blue" target="__blank" href="contacto">clic aquí</a>
+					<!-- Si tienes alguna consulta dale <a class="btn-normal btn-blue" target="__blank" href="contacto">clic aquí</a> -->
 					</p> 
 				    <!-- <a href="#" class="btn btn-primary">Button</a> -->
 					</div>
@@ -90,7 +90,7 @@
 			Lykrune Art es el área encargada del diseño y arte.
 		</p>
 		<p class="txt-parrafo">
-			<a class="btn-normal btn-blue" href="http://lykrune.ml">Mas Información</a>
+			<a class="btn btn-raised btn-info btn btn-danger" target="__blank" href="http://lykrune.ml">Mas Información</a>
 		</p>
 	</div>
 </section>
@@ -111,5 +111,4 @@
 {% endblock %}
 
 {% block postfooter %}
-<span id="nav-section" data="0"></span>
 {% endblock %}

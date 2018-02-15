@@ -36,7 +36,7 @@ function index() { //Función que se jecuta al recibir una variable del tipo con
 				std = estado actual de la tabla en la BD, información general, ejem extractData('phrase|std')
 				count = nos mostrara el numero de datos encontrados
 			*/
-			View::renderPage('panel.login');
+			View::renderPage('login');
 
 			// ---------------------------------------------------------------- //
 		}
