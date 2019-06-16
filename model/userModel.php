@@ -1,7 +1,11 @@
-<?php 
+<?php namespace model;
 /**
 * extends Model
 */
+
+use app\clases\gestionBD;
+use model\Model;
+
 class userModel 
 {
 	private $table;

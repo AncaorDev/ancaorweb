@@ -36,7 +36,7 @@ function mostrar() { //Función que se jecuta al recibir una variable del tipo c
 				std = estado actual de la tabla en la BD, información general, ejem extractData('phrase|std')
 				count = nos mostrara el numero de datos encontrados
 			*/
-			View::renderPage('login');
+			View::renderPage('panel.login');
 
 			// ---------------------------------------------------------------- //
 		}

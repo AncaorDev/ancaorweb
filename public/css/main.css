@@ -92,6 +92,27 @@ body {
         border-radius: 6px 2px;
     }   
 }
+
+a{
+    text-decoration: none;
+}
+a:focus{
+    text-decoration: none;
+}
+#version {
+    background-color: white ; 
+    color: black;
+    padding: 4px;
+    top: 90%;
+    right: 2%;
+    font-size: 1.4rem;
+    position: fixed;
+    z-index: 999;
+}
+#version:hover{
+    text-decoration: none;
+}
+
 /*
 ======== FIN-PRINCIPALES =========
 */

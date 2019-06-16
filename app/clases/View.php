@@ -13,7 +13,9 @@
 			));
 			$twig->addGlobal('BASE', BASE);
 			$twig->addGlobal('WEBSITE', WEBSITE);
-			$twig->addGlobal('AUTHOR', AUTHOR);			
+			$twig->addGlobal('AUTHOR', AUTHOR);	
+			$twig->addGlobal('DIR_LIBS', DIR_LIBS);	
+					
 			// $layout = $twig->load(__DIR__.'/../../../resources/views/base.twig');
 			// print_r($datos);
 			$twig->display($ruta.'twig',compact('datos'));		
@@ -32,19 +34,24 @@
 		}
 
 		public static function verificarRuta($ruta){
-			if (!empty($ruta)) {
-				$arrayData = explode(".", $ruta);
-				$arrayCant = count($arrayData);
-				$newArrayData = [];
-				$ruta = $arrayData[0];
-				if ($arrayCant > 1) {
-					for ($i=0; $i+1 < $arrayCant; $i++) { 
-						$ruta .= '/'.$arrayData[$i+1];
-					}
-				} else {
+			try {
+				if (!empty($ruta)) {
+					$arrayData = explode(".", $ruta);
+					$arrayCant = count($arrayData);
+					$newArrayData = [];
+					$ruta = $arrayData[0];
+					if ($arrayCant > 1) {
+						for ($i=0; $i+1 < $arrayCant; $i++) { 
+							$ruta .= '/'.$arrayData[$i+1];
+						}
+					} else {
 
+					}
+				return $ruta.'.';
 				}
-			return $ruta.'.';
+			} catch (Exception $e) {
+				throw new Exception("Error Processing Request", 1);
+				
 			}
 		}
 	}
