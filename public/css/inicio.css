@@ -1,63 +1,34 @@
-.frase{
-	width: 100%;
-	margin-top: 12px;
-	margin-bottom: 16px;
-	padding-top: 10px;
-	display: inline-block;
-	background-color: rgba(127, 127, 127,.8);
-}
-.txt-frase{
-	font-size: 1.9rem;
-	color: rgb(255, 255, 255);
-	/*text-shadow: -0.5px -0.5px 2px rgb(255, 255, 255); */
-	font-weight: bolder;
-}
+:root {
+	--s_p1 : 1.0rem;
+	--s_p2 : 0.8rem;
+	--s_p3 : 0.6rem;
+	--s_p4 : 0.4rem;
+	--s_t1 : 1.2rem;
+	--s_t2 : 1.0rem;
+	--s_t3 : 0.8rem;
+	--s_t4 : 0.6rem;
 
-.text-frase{
-	width: 100%;
-    padding-top:10px; 
-    padding-bottom:10px; 
-    letter-spacing: 3px;
-    font-size:1.3rem;
-    color: rgb(255, 255, 255);
-    font-family: 'PT Sans';
-    font-weight: 800;
-/*    text-shadow:
-   -0.9px -0.9px 0 #fff,
-    0.9px -0.9px 0 #fff,
-   -0.9px 0.9px 0 #fff,
-    0.9px 0.9px 0 #fff;*/
 }
-@media(min-width: 768px) {
-    .content-cabecera {
-	    /*margin-top: 68px;*/
-	    text-align: center;
-    }
-    .text-frase{
-    	width: 80%;
-    	display: inline-block;
-		padding-left: 16px; 
-    	padding-right: 16px; 
-	    font-size:2.1rem;
-	    /*text-shadow:
-	   -1.4px -1.4px 0 #fff,
-	    1.4px -1.4px 0 #fff,
-	   -1.4px 1.4px 0 #fff,
-	    1.4px 1.4px 0 #fff;*/
-    }
+#navbarColor01 .enfixed{
+	margin-top: 10px;
 }
-
-#change_phrase{
-	position: absolute;
-	/*display: block;*/
-	font-size: 10px;
-	margin-left: 200px;
-}
-
 
 #section-about{
 	height: 100%;
 	background: url(../images/virtual.jpg);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-body-about {
+    background: var(--card-principal) !important;
+    color:white;
+}
+
+
+#card-about .card-footer {
+    background: var(--card-principal)!important;
 }
 
 .section{
@@ -72,29 +43,35 @@
 	font-size: 1.8rem;
 	color: rgb(255, 255, 255);
 	/*font-weight: bolder;*/
-}	
+}
 
 #cont-icon {
     border-radius: 50%;
     /*background-color: rgb(70, 111, 183);*/
     padding: 34px 33px 16px 33px;
-    
+
 }
 
 #icon-down{
-    padding: 1px 0 1px 0;
+    padding: 5px 2px 5px 2px;
     border-style: double;
     border: 2px dotted rgb(255, 49, 49);
     /*background-color: rgb(70, 111, 173);*/
     border-radius: 50%;
     color: rgb(255, 49, 49);
-    font-size:4.2rem;
+    font-size:2.1rem;
    /* text-shadow:
    -1px -1px 0 rgb(14, 47, 105),
     1px -1px 0 rgb(14, 47, 105),
    -1px 1px 0 rgb(14, 47, 105),
     1px 1px 0 rgb(14, 47, 105);*/
     /*box-shadow:  1px 2px 4px black;*/
+}
+.img-mark {
+	width:100%;
+}
+.img-mark  > img{
+	width:100%;
 }
 @media (max-width: 720px){
 	#section-about{
@@ -104,7 +81,9 @@
 		font-size: 1.4rem;
 	}
 	#icon-down{
-		font-size:3.4rem;
+		padding: 4px 0px 4px 0px;
+		font-size:1.8rem;
+		padding-bottom: 2px;
 	}
 	#change_phrase{
 		position: relative;
@@ -112,12 +91,19 @@
 		font-size: 10px;
 		margin-left: 0px;
 	}
+	.img-mark {
+		padding-top: 60px;
+		text-align: center;
+	}
+	.img-mark  > img{
+		width:35%;
+	}
 }
 .btn-normal{
 	display: inline-block;
-	padding-top: 5px; 
-	padding-bottom: 5px; 
-	padding-left: 7px; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 7px;
 	padding-right: 7px;
 	border-radius: 6px;
 	cursor: pointer;
@@ -126,9 +112,9 @@
 }
 .btn-normal:hover{
 	display: inline-block;
-	padding-top: 5px; 
-	padding-bottom: 5px; 
-	padding-left: 7px; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 7px;
 	padding-right: 7px;
 	border-radius: 6px;
 	cursor: pointer;
@@ -137,9 +123,9 @@
 }
 .btn-normal:focus{
 	display: inline-block;
-	padding-top: 5px; 
-	padding-bottom: 5px; 
-	padding-left: 7px; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 7px;
 	padding-right: 7px;
 	border-radius: 6px;
 	cursor: pointer;
@@ -168,14 +154,14 @@
 .txt-title {
     letter-spacing: 3px;
     padding-top:60px;
-    text-align: center; 
+    text-align: center;
     color: white;
     font-family: 'Amble';
     font-weight: 900;
     text-transform:uppercase;
     -webkit-text-fill-color: white;
     -webkit-text-stroke: 1px white;
-	font-size:4.2rem;
+	font-size:1.6rem;
    /* text-shadow:
    -4px -4px 0 #fff,
     4px -4px 0 #fff,
@@ -188,7 +174,7 @@
 	padding-top: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
-	font-size: 1.9rem;
+	font-size: var(--s_p1);
 	color: rgb(255,255,255);
 	text-align: center;
 	margin-top: 0;
@@ -198,22 +184,22 @@
 	padding-top: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
-	font-size: 2.1rem;
+	font-size: var(--s_p1);
 	color: rgb(255,255,255);
 	text-align: center;
 }
 
 @media(max-width: 720px){
 	.txt-title {
-		font-size:2.6rem;
+		font-size:var(--s_t2);
 		padding-top: 70px;
 		margin-top: 0;
 	}
 	.txt-parrafo{
-		font-size: 1.6rem;
+		font-size: var(--s_p2);
 	}
 	.txt-parrafo2{
-		font-size: 1.6rem;
+		font-size: var(--s_p2);
 	}
 }
 
@@ -221,26 +207,26 @@
 
 #section-lykrune {
     background:url(../images/fondo4.jpg);
-    padding-bottom: 90px; 
+    padding-bottom: 90px;
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
-    background-position: 0px 0px; 
+    background-position: 0px 0px;
     background-attachment: fixed;
     /*padding-top: 20px;*/
     /*background-color: rgb(255, 255, 255);*/
-    }    
+    }
 
 @media(min-width: 1024px) {
     #lykrune {
         height: 100%;
-    }    
+    }
 }
 .t-lykrune {
 	margin-top: 0;
     letter-spacing: 3px;
     padding-top:60px;
-    text-align: center; 
+    text-align: center;
     font-size:32px;
     color: white;
     font-family: 'PT Sans';
@@ -259,17 +245,17 @@
         font-size:42px;
         padding-top:150px;
         /*margin-left: 40%;*/
-   } 
+   }
 }
 
 #section-lunarcode {
     background:url(../images/ciudad.jpg);
-    padding-bottom: 90px; 
+    padding-bottom: 90px;
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
-    background-position: 0px 0px; 
+    background-position: 0px 0px;
     background-attachment: fixed;
     /*padding-top: 20px;*/
     /*background-color: rgb(255, 255, 255);*/
-    }  
+}

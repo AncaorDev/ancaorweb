@@ -1,6 +1,8 @@
 <?php namespace app\manager;
+
 use app\clases\Functions;
 use app\manager\Loader;
+use app\clases\Log;
 
 class Request{
 	private $controller;
@@ -28,10 +30,10 @@ class Request{
 		} else {
 			$this->controller = "inicio";
 		}
-		$this->Procesar();	
+		$this->Procesar();
 	}
-	 private function Procesar(){
+
+	private function Procesar(){
 	  	Loader::filterController($this->controller);
-	 }
-	
-}	
+	}
+}

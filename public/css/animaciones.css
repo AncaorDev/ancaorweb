@@ -12,13 +12,18 @@
   animation-name: slideright;
 }
 
+.animate-bottom {
+  animation-duration: 1s;
+  animation-name: slide_bottom;
+}
+
 .show-left {
   animation-duration: 1s;
   animation-name: showleft;
 }
 
 @-webkit-keyframes slideleft {
-    from {
+  from {
     margin-left: 40%;
     width: 100%
   }
@@ -91,6 +96,42 @@
     margin-left: 0%;
   }
 }
+
+
+
+@-webkit-keyframes slide_bottom {
+  from {
+    margin-bottom: 100%;
+    /*width: 100%*/
+  }
+  to {
+    margin-bottom: 0%;
+    /*width: 100%;*/
+  }
+}
+
+@-moz-keyframes slide_bottom {
+  from {
+    margin-bottom: 100%;
+    /*width: 100%*/
+  }
+  to {
+    margin-bottom: 0%;
+    /*width: 100%;*/
+  }
+}
+
+@keyframes slide_bottom {
+  from {
+    margin-bottom: 100%;
+    /*width: 100%*/
+  }
+  to {
+    margin-bottom: 0%;
+    /*width: 100%;*/
+  }
+}
+
 /*
 ======== FIN - ANIMACIONES =========
 */
