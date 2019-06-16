@@ -25,7 +25,7 @@
     background: var(--card-principal) !important;
     color:white;
 }
-  
+
 
 #card-about .card-footer {
     background: var(--card-principal)!important;
@@ -43,13 +43,13 @@
 	font-size: 1.8rem;
 	color: rgb(255, 255, 255);
 	/*font-weight: bolder;*/
-}	
+}
 
 #cont-icon {
     border-radius: 50%;
     /*background-color: rgb(70, 111, 183);*/
     padding: 34px 33px 16px 33px;
-    
+
 }
 
 #icon-down{
@@ -101,9 +101,9 @@
 }
 .btn-normal{
 	display: inline-block;
-	padding-top: 5px; 
-	padding-bottom: 5px; 
-	padding-left: 7px; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 7px;
 	padding-right: 7px;
 	border-radius: 6px;
 	cursor: pointer;
@@ -112,9 +112,9 @@
 }
 .btn-normal:hover{
 	display: inline-block;
-	padding-top: 5px; 
-	padding-bottom: 5px; 
-	padding-left: 7px; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 7px;
 	padding-right: 7px;
 	border-radius: 6px;
 	cursor: pointer;
@@ -123,9 +123,9 @@
 }
 .btn-normal:focus{
 	display: inline-block;
-	padding-top: 5px; 
-	padding-bottom: 5px; 
-	padding-left: 7px; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 7px;
 	padding-right: 7px;
 	border-radius: 6px;
 	cursor: pointer;
@@ -154,7 +154,7 @@
 .txt-title {
     letter-spacing: 3px;
     padding-top:60px;
-    text-align: center; 
+    text-align: center;
     color: white;
     font-family: 'Amble';
     font-weight: 900;
@@ -207,26 +207,26 @@
 
 #section-lykrune {
     background:url(../images/fondo4.jpg);
-    padding-bottom: 90px; 
+    padding-bottom: 90px;
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
-    background-position: 0px 0px; 
+    background-position: 0px 0px;
     background-attachment: fixed;
     /*padding-top: 20px;*/
     /*background-color: rgb(255, 255, 255);*/
-    }    
+    }
 
 @media(min-width: 1024px) {
     #lykrune {
         height: 100%;
-    }    
+    }
 }
 .t-lykrune {
 	margin-top: 0;
     letter-spacing: 3px;
     padding-top:60px;
-    text-align: center; 
+    text-align: center;
     font-size:32px;
     color: white;
     font-family: 'PT Sans';
@@ -245,17 +245,17 @@
         font-size:42px;
         padding-top:150px;
         /*margin-left: 40%;*/
-   } 
+   }
 }
 
 #section-lunarcode {
     background:url(../images/ciudad.jpg);
-    padding-bottom: 90px; 
+    padding-bottom: 90px;
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
-    background-position: 0px 0px; 
+    background-position: 0px 0px;
     background-attachment: fixed;
     /*padding-top: 20px;*/
     /*background-color: rgb(255, 255, 255);*/
-}  
+}

@@ -18,18 +18,18 @@ class ajaxManager
 	{
 		new Core();
 	}
-	public function ejecutar($m){
-		if (file_exists(__DIR__.'/' . $m . '.php')) {
-        	require(__DIR__.'/'. $m .'.php');
+	public function ejecutar($modelo){
+		if (file_exists(__DIR__.'/' . $modelo . '.php')) {
+        	require(__DIR__.'/'. $modelo .'.php');
         	$datos = [];
 			// Registramos todas las variables Post
-			foreach($_POST as $nombre_campo => $valor){ 
-			   $asignacion = "\$" . $nombre_campo . "='" . $valor . "';"; 
+			foreach($_POST as $nombre_campo => $valor){
+			   $asignacion = "\$" . $nombre_campo . "='" . $valor . "';";
 			   $datos[$nombre_campo] = $valor;
-			   eval($asignacion); 
+			   eval($asignacion);
 			}
-			$m = "ajax\\".$m;
-			$om = new $m(); 
+			$modelo = "ajax\\".$modelo;
+			$om = new $modelo();
         	return $om->Retorno($datos);
       	} else {
       		$data['error'] = "File not found";

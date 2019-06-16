@@ -51,7 +51,7 @@ html {
 body {
     height: 100%;
      font-family: 'Ubuntu';
-} 
+}
 
 .c-red {
     color: red;
@@ -66,14 +66,14 @@ body {
 }
 .space > hr {
     width: 50%;
-    border: 0; 
-    height: 12px; 
+    border: 0;
+    height: 12px;
     box-shadow: inset 0 12px 12px -12px white;
 }
 
 .separador > hr {
-    border: 0; 
-    height: 0; 
+    border: 0;
+    height: 0;
     border-top: 4px solid rgb(20, 27, 37);
     text-align:center;width: 80%;
 }
@@ -81,7 +81,7 @@ body {
     position: relative;
     /*25cf => circle*/
     /*top: -22px; content:"\25bc\25b2"; */
-    font-size: 34px;line-height: 34px; 
+    font-size: 34px;line-height: 34px;
     color: rgb(20, 27, 37);
  }
 
@@ -106,7 +106,7 @@ a:focus{
     padding: 2px;
     color: var(--color_ancaor) !important;
     text-transform: none;
-    font-size: 1.01rem !important; 
+    font-size: 1.01rem !important;
     background-color: white !important;
     font-weight: 200 !important;
 }
@@ -137,7 +137,7 @@ a:focus{
         background: rgb(0,0,0);
         height: 30px;
         padding-top: 0px;
-    }  
+    }
 }
 .fixed > .li-ancaor{
     padding:6px;
@@ -185,8 +185,8 @@ a:focus{
     padding-bottom: 0.5rem;
 }
 .head_anc-content {
-    padding-top: 4px; 
-    padding-top: 4px; 
+    padding-top: 4px;
+    padding-top: 4px;
 }
 .head_anc-content .title-general {
     color: white;
@@ -196,23 +196,22 @@ a:focus{
     color:var(--color_ancaor);
     letter-spacing:10px;
     font-weight: bolder;
-}  
+}
 .head_anc-content .sub-title-general {
     color: white;
     display: block;
-    vertical-align: middle;
     font-family: 'PT Sans';
-}  
+}
 
 #nav-anc {
     background: var(--color_ancaor);
-    transition: 0.3s;
+    transition: 1s;
 }
 
 .link_anc {
     color: var(--letras) !important;
     text-transform: none;
-    font-size: 1.01rem !important; 
+    font-size: 1.01rem !important;
 }
 
 .fondo_none {
@@ -233,7 +232,7 @@ a:focus{
 
 .text-general {
     color: white;
-}   
+}
 
 #card-principal .card-footer {
     background: var(--card-principal);

@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteBase /ancaor
+RewriteRule ^([a-zA-Z0-9-]*)$ index.php?page=$1
+RewriteRule ^panel/([a-zA-Z0-9-]*)$ index.php?page=panel&action=$1
+#RewriteRule ^(.*)$ //index.php/$1 [L]

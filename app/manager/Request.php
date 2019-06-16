@@ -30,10 +30,10 @@ class Request{
 		} else {
 			$this->controller = "inicio";
 		}
-		$this->Procesar();	
+		$this->Procesar();
 	}
-	 private function Procesar(){
+
+	private function Procesar(){
 	  	Loader::filterController($this->controller);
-	 }
-	
-}	
+	}
+}
